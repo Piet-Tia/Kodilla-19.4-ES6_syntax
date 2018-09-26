@@ -1,0 +1,25 @@
+{
+	"name": "19.4-ES6_syntax",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "babel script.js --watch --out-file script-compiled.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Piet-Tia/Kodilla-19.4-ES6_syntax.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Piet-Tia/Kodilla-19.4-ES6_syntax/issues"
+	},
+	"homepage": "https://github.com/Piet-Tia/Kodilla-19.4-ES6_syntax#readme",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-latest": "^6.24.1"
+	}
+}
