@@ -53,7 +53,7 @@ console.log('Hello World ' + passedGrades + ' OK!');
 // testing 5
 console.log('Hello World ' + exercise5check + ' OK!');
 
-// aaaaand I got lost trying to compare a [1,2,3,4,5] array to another [1,2,3,4,5] array... :/
+// now trying to shorten "checkAll"...
 
 var allTestResults = [part1_3, multiply(2), average(1, 3, 5), passedGrades, exercise5check];
 var mapAllTestResults = allTestResults.map(function (item, index) {
@@ -65,14 +65,14 @@ var checkAll = function checkAll() {
 		if (allTestResults[i] !== mapAllTestResults[i]) {
 			return false;
 		}
-		return true;
 	}
+	return true;
 };
 
 var finalAnswer = checkAll() === true ? "ES6 is great !" : "I am stupid";
 
-console.log('allTestResulsts:', allTestResults);
-console.log('mapAllTestResults: ', mapAllTestResults);
+//console.log('allTestResulsts:', allTestResults);
+//console.log('mapAllTestResults: ', mapAllTestResults);
 
-console.log('checkAll(): ' + checkAll());
+//console.log(`checkAll(): ${checkAll()}`);
 console.log('finalAnswer: ' + finalAnswer);
