@@ -60,6 +60,13 @@ var mapAllTestResults = allTestResults.map(function (item, index) {
 	return index + 1;
 });
 
+// something to laugh at:
+var checkTest = function checkTest() {
+	return allTestResults.forEach(function (el, index) {
+		return allTestResults[index] !== mapAllTestResults[index] ? true : true;
+	});
+};
+
 var checkAll = function checkAll() {
 	for (var i = 0; i < allTestResults.length; i++) {
 		if (allTestResults[i] !== mapAllTestResults[i]) {
@@ -71,8 +78,4 @@ var checkAll = function checkAll() {
 
 var finalAnswer = checkAll() === true ? "ES6 is great !" : "I am stupid";
 
-//console.log('allTestResulsts:', allTestResults);
-//console.log('mapAllTestResults: ', mapAllTestResults);
-
-//console.log(`checkAll(): ${checkAll()}`);
 console.log('finalAnswer: ' + finalAnswer);

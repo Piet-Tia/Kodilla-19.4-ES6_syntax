@@ -49,9 +49,25 @@ console.log(`Hello World ${exercise5check} OK!`);
 // now trying to shorten "checkAll"...
 
 const allTestResults = [part1_3 , multiply(2) , average(1,3,5) , passedGrades , exercise5check];
-const mapAllTestResults = allTestResults.map((item,index) => (index + 1));
 
-const checkAll = function (){
+
+
+const checkAll = allTestResults.reduce(function(prev, curr, index, arr){
+	console.log(prev,curr, index+1);
+	if (!prev) {
+		curr = prev;
+	};
+	if (curr !== (index+1)) { // @ MATEUSZ-WROBEL: " (curr !== (index+1)) ? false : true; " JAK TO MOZNA TU WSTAWIC ? PRZYPISAC DO ZMIENNEJ ? WARTO ?
+		return false;
+	}
+	else {
+		return true;
+	}
+},true);
+
+console.log(checkAll);
+
+/*const checkAll_OLD = function (){
 	for (let i=0 ; i < allTestResults.length ; i++) {
 		if (allTestResults[i] !== mapAllTestResults[i]){
 			return false;
@@ -59,11 +75,7 @@ const checkAll = function (){
 	}
 	return true;
 }
+*/
+const finalAnswer = checkAll === true  ? "ES6 is great !" : "I am stupid";
 
-const finalAnswer = checkAll() === true  ? "ES6 is great !" : "I am stupid";
-
-//console.log('allTestResulsts:', allTestResults);
-//console.log('mapAllTestResults: ', mapAllTestResults);
-
-//console.log(`checkAll(): ${checkAll()}`);
 console.log(`finalAnswer: ${finalAnswer}`);
